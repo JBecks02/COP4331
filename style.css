@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text for readability */
+}
+
+/* Header Styles */
+header {
+    background-color: #1f1f1f; /* Darker header */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #BB86FC; /* Accent color */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Navigation Styles */
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #BB86FC; /* Accent color */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #6b2da9; /* Hover effect with a different accent color */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    background-color: #1E1E1E; /* Slightly lighter dark background */
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+main h2 {
+    color: #BB86FC; /* Accent color */
+    border-bottom: 2px solid #cddf7a;
+    padding-bottom: 10px;
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 3px solid #BB86FC; /* Accent color */
+}
+
+/* Button Styles */
+button:hover {
+    background-color: #e2da71;
+    color: #121212;
+}
+
+/* Input Field Styles */
+input[type="text"], input[type="email"], textarea {
+    background-color: #2C2C2C;
+    color: #E0E0E0;
+    border: 1px solid #BB86FC;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline: none;
+    border-color: #ecec67;
+}
+
+a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #BB86FC;
+    color: rgb(224, 216, 228);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, box-shadow 0.3s, font 0.1s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    background-color: #5e1a99;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+a:active {
+    background-color: #adadad;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
