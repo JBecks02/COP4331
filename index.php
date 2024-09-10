@@ -15,8 +15,9 @@
 
         <!-- Below is the log in portion of our home page -->
         <h1>
+
             <div class="wrapper">
-                <form action="">
+                <form action="GET">
                     <h1>Login</h1>
                     <div class="inpu">
                         <input type="Name" placeholder="firstname" required>
@@ -40,29 +41,22 @@
             </div>
         </div>
 
-
-
-        <!-- Your content goes here -->
-        <form action="" method="post">
-
+        <form action="formhandler.inc.php" method="post">
             <label for="firstname">Firstname</label>
-            <input id="firstname" type="text" name="firstname" placeholder="Firstname...">
-
+            <input  required id="firstname" type="text" name="firstname" placeholder="Firstname..." width="1004">
             <label for="firstname">Lastname</label>
-            <input id="lastname" type="text" name="lastname" placeholder="lastname">
-
-            <input id="" type="checkbox">
-
+            <input required id="lastname" type="text" name="lastname" placeholder="lastname">
+            <button class="submit-button" position="relative" type="Submit">Submit</button>
         </form>
+
+
+
 
         <div>
             <a href="https://www.tiktok.com/@classiedevva3/video/7396798316534631723" class="sleek-button">Spagetti</a>
         </div>
-        
+
 
     </body>
 
-
-##commentdssdfaslfjasAvery
-
-<html>
+    <html>
