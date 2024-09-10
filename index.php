@@ -8,30 +8,30 @@
         <meta http-equiv="X-UA-Compatible" content="ID=edge">
         <title>Your Page Title</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-           
+        <title>Contact Manager</title>
+    </head>
 
-        <body>
+    <body>
         <main>
 
         <!-- Below is the log in portion of our home page -->
-        <h1>
+        
 
             <div class="wrapper">
                 <form action="GET">
                     <h1>Login</h1>
-                    <div class="inpu">
+                    <div class="input">
                         <input type="Name" placeholder="firstname" required>
                     </div>
-                    <div>
+                    <div class="input-box">
                         <input type="Lastname" placeholder="lastname" required>
                     </div>
                     <div class="remember-forget">
                         <label><input type="checkbox"> Remember me</label>
                     </div>
-
+                    <button>Submit</button>
                 </form>
             </div>
-        </h1>
         <!-- End of the log in area of the home page -->
 
 
@@ -41,14 +41,16 @@
             </div>
         </div>
 
+
         <form action="formhandler.inc.php" method="post">
+            <h2>New User</h2>
             <label for="firstname">Firstname</label>
             <input  required id="firstname" type="text" name="firstname" placeholder="Firstname..." width="1004">
             <label for="firstname">Lastname</label>
             <input required id="lastname" type="text" name="lastname" placeholder="lastname">
             <button class="submit-button" position="relative" type="Submit">Submit</button>
         </form>
-
+    
 
 
 
@@ -58,5 +60,4 @@
 
 
     </body>
-
-    <html>
+<html>
