@@ -2,29 +2,29 @@
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    $firstname = $_GET["firstname"];
-    $lastname = $_GET["lastname"];
+    $firstname = $_POST["firstname"];
 
     try{
         require_once "dbh.inc.php";
 
-        $query = "INSERT INTO contact_manager (name) VALUES ($firstname);";
+        $query = "INSERT INTO users (first_name) VALUES (:firstname);";
         $stmt = $pdo->prepare($query);
 
-        stmt->execute([firstname]);
+        $stmt->execute([':firstname' => $firstname]);
 
         $pdo = null;
-        stmt = null;
+	$stmt = null;
 
-        die();
-        header("Location: ../index.php");
+	header("Location: ../index.php");
+        exit();
 
     }catch(PDOException $e)
     {
-    die("Failed");
+    die("Failed: ". $e->getMessage());
     }
 
 }
 else{
-    header("Location: ../index.php");
+	header("Location: ../index.php");
+	exit();
 }
