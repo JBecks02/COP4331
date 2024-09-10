@@ -15,13 +15,11 @@
         <main>
 
         <!-- Below is the log in portion of our home page -->
-        
-
             <div class="wrapper">
-                <form action="GET">
+                <form action="login.php" method="post">
                     <h1>Login</h1>
                     <div class="input">
-                        <input type="Name" placeholder="firstname" required>
+                        <input type="text" name="firstname" placeholder="firstname" required>
                     </div>
                     <div class="input-box">
                         <input type="Lastname" placeholder="lastname" required>
@@ -34,12 +32,6 @@
             </div>
         <!-- End of the log in area of the home page -->
 
-
-        <div>
-            <div>
-                
-            </div>
-        </div>
 
 
         <form action="formhandler.inc.php" method="post">
