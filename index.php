@@ -9,10 +9,8 @@
         <title>Your Page Title</title>
         <link rel="stylesheet" type="text/css" href="style.css">
            
-        </style>
-    </head>
 
-    <body>
+        <body>
         <main>
 
         <!-- Below is the log in portion of our home page -->
@@ -45,16 +43,17 @@
 
 
         <!-- Your content goes here -->
-        <form action="" method="post"></form>
+        <form action="" method="post">
+
             <label for="firstname">Firstname</label>
             <input id="firstname" type="text" name="firstname" placeholder="Firstname...">
 
-        <label for="firstname">Lastname</label>
+            <label for="firstname">Lastname</label>
             <input id="lastname" type="text" name="lastname" placeholder="lastname">
-        <input id="" type="checkbox">
 
+            <input id="" type="checkbox">
 
-        
+        </form>
 
         <div>
             <a href="https://www.tiktok.com/@classiedevva3/video/7396798316534631723" class="sleek-button">Spagetti</a>
