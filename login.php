@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	$result = $stmt->fetch(PDO::FETCH_ASSOC);
 	
 	if ((bool)$result['name_exists']){
-		header("Location: ../contact.php");
+		header("Location: ../nextPage.php");
         	exit();
 	}
 	else {
