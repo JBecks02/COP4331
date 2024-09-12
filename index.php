@@ -6,7 +6,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ID=edge">
-        <title>Your Page Title</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Contact Manager</title>
     </head>
@@ -19,10 +18,10 @@
                 <form action="login.php" method="post">
                     <h1>Login</h1>
                     <div class="input">
-                        <input type="text" name="firstname" placeholder="firstname" required>
+                        <input type="text" name="username" placeholder="username" required>
                     </div>
                     <div class="input-box">
-                        <input type="Lastname" placeholder="lastname" required>
+                        <input type="text" name="password" placeholder="password" required>
                     </div>
                     <div class="remember-forget">
                         <label><input type="checkbox"> Remember me</label>
