@@ -12,7 +12,29 @@
 
     <body>
         <main>
+
+
             <p>This is a new page after login</p>
+
+            <form action="search.php" method="post">
+                <div class="search">
+                    <span class="search-icon material-symbol-outlined">Contacts</span>
+                    <input class="search-input" type="search" placeholder="Search">
+                </div>
+            </form>
+
+            <div>
+                <p>Add New Contact</p>
+            </div>
+
+            
+
+
+
+
+
+
+
         </main>
     </body>
 
