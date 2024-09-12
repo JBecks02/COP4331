@@ -1,28 +1,33 @@
 <?php
 
+
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    $firstname = $_POST["firstname"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
 
     try{
-        require_once "dbh.inc.php";
+            require_once "dbh.inc.php";
+            echo "You are here";
 
-        $query = "SELECT EXISTS( SELECT 1 FROM users WHERE first_name = :firstname) AS name_exists";
+        $query = "SELECT EXISTS( SELECT 1 FROM users WHERE username = :username AND password = :password) AS name_exists";
         $stmt = $pdo->prepare($query);
 
-        $stmt->execute([':firstname' => $firstname]);
+        $stmt->execute([':username' => $username, ':password' => $password]);
 
-	$result = $stmt->fetch(PDO::FETCH_ASSOC);
-	
-	if ((bool)$result['name_exists']){
-		header("Location: ../nextPage.php");
-        	exit();
-	}
-	else {
-		$error = urlencode("Name not found");
-		header("Location: ../bad.php?error=" . $result['name_exists']);
-        	exit();
-	}
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        echo "Before if statement";
+        if ((bool)$result['name_exists']){
+                header("Location: ../nextPage.php");
+                exit();
+        }
+        else {
+                $error = urlencode("Name not Found");
+                
+                header("Location: ../index.php?error=");
+
+                exit();
+        }
 
 
         $pdo = null;
@@ -32,7 +37,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     }catch(PDOException $e)
     {
-    die("Failed: ". $e->getMessage());
+            header("Location: ../youarehere.php");
+            die("Failed: ". $e->getMessage());
     }
 
 }
@@ -40,5 +46,3 @@ else{
         header("Location: ../index.php");
         exit();
 }
-
-?>
