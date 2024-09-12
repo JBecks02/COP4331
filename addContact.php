@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $firstname = $_POST["firstname"];
@@ -10,24 +10,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     try{
         require_once "dbh.inc.php";
 
-        $query = "INSERT INTO contacts (firstname, lastname, phone, email) VALUES (:firstname, :lastname, :phone, :email);";
+        $query = "INSERT INTO contacts (firstname, lastname, phone, email, user_id) VALUES (:firstname, :lastname, :phone, :email, :userID);";
         $stmt = $pdo->prepare($query);
 
         $stmt->execute([
-                ':firstname' => $firstname
-                ':lastname' => $lastname
-                ':phone' => $phone
-                ':email' => $email
-        ]);
+		':firstname' => $firstname,
+		':lastname' => $lastname,
+		':phone' => $phone,
+		':email' => $email,
+		':userID' => $_SESSION['userID'],
+	]);
 
         $pdo = null;
         $stmt = null;
 
-        header("Location: ../nextpage.php");
+        header("Location: ../nextPage.php");
         exit();
 
     }catch(PDOException $e)
     {
+	    echo $_SESSION['username'];
     die("Failed: ". $e->getMessage());
     }
 
@@ -36,3 +38,4 @@ else{
         header("Location: ../nextpage.php");
         exit();
 }
+?>
