@@ -36,9 +36,13 @@
         <form action="formhandler.inc.php" method="post">
             <h2>New User</h2>
             <label for="firstname">Firstname</label>
-            <input  required id="firstname" type="text" name="firstname" placeholder="Firstname..." width="1004">
-            <label for="firstname">Lastname</label>
-            <input required id="lastname" type="text" name="lastname" placeholder="lastname">
+            <input  required id="firstname" type="text" name="firstname" placeholder="First Name" width="1004">
+            <label for="lastname">Lastname</label>
+            <input required id="lastname" type="text" name="lastname" placeholder="Last Name">
+	    <label for="username">Username</label>
+	    <input required id="username" type="text" name="username" placeholder="Username">
+	    <label for="password">Password</label>
+	    <input required id="password" type="text" name="password" placeholder="Password">
             <button class="submit-button" position="relative" type="Submit">Submit</button>
         </form>
     
