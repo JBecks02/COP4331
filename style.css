@@ -14,7 +14,7 @@ body{
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fwebsite%2520background%2F&psig=AOvVaw0uW5fFFbkgnUIm42uT9vXZ&ust=1726348229105000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMjp47rqwIgDFQAAAAAdAAAAABAE);
+    background-color: #ff0000;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
