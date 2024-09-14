@@ -22,9 +22,10 @@ session_start();
 
             <form action="search.php" method="post">
                 
-                    <span class="search-icon material-symbol-outlined">Contacts</span>
-                    <input class="input-box" name="searchtext" type="search" placeholder="Search">
+                    <input class="input-box" placeholder="Search">
+                    <div class="btn">
                     <button>Submit</button>
+                    </div>
 		    </form>
             </div>
 
@@ -67,7 +68,9 @@ session_start();
 	            <input required id="email" type="text" name="email" placeholder="Email Address">
                 </div>
 
-                <button class=".btn">Submit</button>
+                <div class="btn">
+                <button>Submit</button>
+                </div>
                 </form>
 
             </div>
