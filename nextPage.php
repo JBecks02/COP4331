@@ -17,15 +17,17 @@ session_start();
         <main>
 
 
-            <p>Search Contacts</p>
+            <div class="wrapper">
+            <h1>Search contacts</h1>
 
             <form action="search.php" method="post">
-                <div class="search">
+                
                     <span class="search-icon material-symbol-outlined">Contacts</span>
-                    <input class="search-input" name="searchtext" type="search" placeholder="Search">
+                    <input class="input-box" name="searchtext" type="search" placeholder="Search">
                     <button>Submit</button>
-                </div>
-		</form>
+		    </form>
+            </div>
+
 
 	    <?php
 		if(isset($_SESSION['loadcontacts']) && $_SESSION['loadcontacts'] == '1'){
@@ -43,37 +45,62 @@ session_start();
             <div>
 
             </div>
-		
-	   <form action="addContact.php" method="post">
-            <h2>Add Contact</h2>
-            <label for="firstname">Firstname</label>
+
+            <div class="wrapper">
+	
+	            <form action="addContact.php" method="post">
+                <h1>Add Contact</h1>
+                
+                <div class="input-box">
+                <input required id="firstname" type="text" name="firstname" placeholder="Firstname..." width="1004">
+                </div>
+
+                <div class="input-box">
+	            <input required id="lastname" type="text" name="lastname" placeholder="lastname">
+	            </div>
+
+                <div class="input-box">
+	            <input required id="phone" type="text" name="phone" placeholder="Phone Number">
+                </div>
+
+                <div class="input-box">
+	            <input required id="email" type="text" name="email" placeholder="Email Address">
+                </div>
+
+                <button class=".btn">Submit</button>
+                </form>
+
+            </div>
+
+            <div class="wrapper">
+	        <form action="rmContact.php" method="post">
+		    <h1>Remove Contact</h1>
+	        
+            <div class="input-box">
             <input  required id="firstname" type="text" name="firstname" placeholder="Firstname..." width="1004">
-            <label for="lastname">Lastname</label>
-	    <input required id="lastname" type="text" name="lastname" placeholder="lastname">
-	    <label for="phone">Phone Nunber</label>
-	    <input required id="phone" type="text" name="phone" placeholder="Phone Number">
-            <label for="email">Email Address</label>
-	    <input required id="email" type="text" name="email" placeholder="Email Address">
-            <button class="submit-button" position="relative" type="Submit">Submit</button>
-        </form>
-            
-	    <form action="rmContact.php" method="post">
-		<h2>Remove Contact</h2>
-	    <label for="firstname">Firstname</label>
-            <input  required id="firstname" type="text" name="firstname" placeholder="Firstname..." width="1004">
-            <label for="lastname">Lastname</label>
-	    <input required id="lastname" type="text" name="lastname" placeholder="lastname">
-	    <button class="submit-button" position="relative" type="Submit">Submit</button>
-	    </form>
+            </div>
+
+            <div class="input-box">
+	        <input required id="lastname" type="text" name="lastname" placeholder="lastname">
+            </div>
+
+            <div class="btn">
+	        <button >Submit</button>
+            </div>
+
+	        </form>
+
+            </div>
 
 
+    <div class="btn">
         <section>
             <button>
                 <a href="http://www.marketsofesos.xyz/">Sign out</a>
             </button>
         </section>
 
-        
+    </div>
 
 
         </main>
