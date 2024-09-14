@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,16 +17,35 @@
         <main>
 
 
-            <p>This is a new page after login</p>
+            <p>Search Contacts</p>
 
-            <form action="">
+            <form action="search.php" method="post">
                 <div class="search">
                     <span class="search-icon material-symbol-outlined">Contacts</span>
-                    <input class="search-input" type="search" placeholder="Search">
-                    
+                    <input class="search-input" name="searchtext" type="search" placeholder="Search">
+                    <button>Submit</button>
                 </div>
+		</form>
 
-	    </form>
+	    <?php
+		if(isset($_SESSION['loadcontacts']) && $_SESSION['loadcontacts'] == '1'){
+			echo "<h2>a name was found</h2>";
+			echo "<h3> " . $_SESSION['result'] . "</h3>";
+			foreach( $_SESSION['result'] as $contact){
+				echo "<p>" . $contact['firstname'] . "</p>";
+			}
+			$_SESSION['loadcontacts'] = '0';
+
+		}
+		else{
+			echo"<h2>no name found:". (isset($_SESSION['loadcontacts']) ? 'true' : 'false') . "</h2>";
+		}
+
+	    ?>
+
+            <div>
+
+            </div>
 		
 	   <form action="addContact.php" method="post">
             <h2>Add Contact</h2>
@@ -48,6 +70,13 @@
 	    </form>
 
 
+        <section>
+            <button>
+                <a href="http://www.marketsofesos.xyz/">Sign out</a>
+            </button>
+        </section>
+
+        
 
 
         </main>
