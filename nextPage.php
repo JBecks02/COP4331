@@ -29,16 +29,13 @@ session_start();
 
 	    <?php
 		if(isset($_SESSION['loadcontacts']) && $_SESSION['loadcontacts'] == '1'){
-			echo "<h2>a name was found</h2>";
-			echo "<h3> " . $_SESSION['result'] . "</h3>";
 			foreach( $_SESSION['result'] as $contact){
-				echo "<p>" . $contact['firstname'] . "</p>";
+				echo "<p>" . $contact['firstname'] . " " . $contact['lastname'] . ", " . $contact['phone'] . ", " . $contact['email'] . "</p>";
 			}
 			$_SESSION['loadcontacts'] = '0';
 
 		}
 		else{
-			echo"<h2>no name found:". (isset($_SESSION['loadcontacts']) ? 'true' : 'false') . "</h2>";
 		}
 
 	    ?>
