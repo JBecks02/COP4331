@@ -14,14 +14,14 @@ body{
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
-    background-color: #ff0000;
+    background: #d10000;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
     scroll-behavior: smooth; 
     align-items: center;
     min-height: 100vh;
-    background: rgb(190, 192, 191);
+    
 
 
 }
