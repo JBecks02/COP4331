@@ -22,10 +22,8 @@ session_start();
 
             <form action="search.php" method="post">
                 
-                    <input class="input-box" placeholder="Search">
-                    <div class="btn">
-                    <button>Submit</button>
-                    </div>
+                    <input class="input-box" name="searchtext" type="search" placeholder="Search">
+                    <button class="btn">Submit</button>
 		    </form>
             </div>
 
@@ -68,12 +66,49 @@ session_start();
 	            <input required id="email" type="text" name="email" placeholder="Email Address">
                 </div>
 
-                <div class="btn">
-                <button>Submit</button>
-                </div>
+                <button class="btn">Add</button>
                 </form>
 
-            </div>
+	    </div>
+
+	    <div class="wrapper">
+
+                    <form action="updateContact.php" method="post">
+		<h1>Update Contact</h1>
+
+		<h3>Enter Contact to Update:</h3>
+
+                <div class="input-box">
+                <input required id="firstnameS" type="text" name="firstnameS" placeholder="Firstname..." width="1004">
+                </div>
+
+                <div class="input-box">
+                    <input required id="lastnameS" type="text" name="lastnameS" placeholder="lastname">
+		    </div>
+
+		<h3>Update Contact to:</h3>
+		
+		<div class="input-box">
+		<input required id="firstnameU" type="text" name="firstnameU" placeholder="First name" width="1004">
+		</div>
+		
+		<div class="input-box">
+		<input required id="lastnameU" type="text" name="lastnameU" placeholder="Last name">
+		</div>
+		
+
+                <div class="input-box">
+                    <input required id="phone" type="text" name="phone" placeholder="Phone Number">
+                </div>
+
+                <div class="input-box">
+                    <input required id="email" type="text" name="email" placeholder="Email Address">
+                </div>
+
+                <button class="btn">Update</button>
+                </form>
+
+	    </div>
 
             <div class="wrapper">
 	        <form action="rmContact.php" method="post">
@@ -87,23 +122,20 @@ session_start();
 	        <input required id="lastname" type="text" name="lastname" placeholder="lastname">
             </div>
 
-            <div class="btn">
-	        <button >Submit</button>
-            </div>
+            <button class="btn">Remove</button>
 
 	        </form>
 
             </div>
 
 
-    <div class="btn">
+    
         <section>
             <button>
-                <a href="http://www.marketsofesos.xyz/">Sign out</a>
+                <a href="http://www.marketsofesos.xyz/" class="btn">Sign out</a>
             </button>
         </section>
 
-    </div>
 
 
         </main>
