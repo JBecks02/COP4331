@@ -32,7 +32,7 @@
 
         <!-- NEW USER -->
         <div class = "wrapper">
-            <form action="formhandler.inc.php" method="post">
+            <form action="signUp.php" method="post">
                 <h1>New User</h1>
                 <div class="input-box">
                     <input type="text" name="firstname" placeholder="First Name" required>
