@@ -88,10 +88,16 @@ body {
     font-size: 16px;
     color: #333;
     font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* nextpage.php */
+.wrapper .btn:hover {
+    background-color: #333;
+    color: #fff;
+}
 
+
+/* nextpage.php */
 .wrapper2 {
     width: 550px;
     background: rgba(0, 0, 0, 1);
