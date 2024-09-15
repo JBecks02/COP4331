@@ -20,7 +20,7 @@
                     <input type="text" name="username" placeholder="Username" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox"> Remember me</label>
@@ -44,7 +44,7 @@
                     <input type="text" name="username" placeholder="Username" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
 
                 <button type="submit" class="btn">Sign up</button>
