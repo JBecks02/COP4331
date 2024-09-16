@@ -21,7 +21,7 @@
                         <input type="text" name="username" placeholder="username" required>
                     </div>
                     <div class="input-box">
-                        <input type="text" name="password" placeholder="password" required>
+                        <input type="password" name="password" placeholder="password" required>
                     </div>
                     <div class="remember-forget">
                     
