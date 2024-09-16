@@ -8,7 +8,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	$password = $_POST["password"];
 
     try{
-        require_once "dbh.inc.php";
+	    require_once "dbh.inc.php";
+
+	    $query = "SELECT COUNT(*) AS user_exists FROM users WHERE username = :username;";
+	    $stmt = pdo->prepare($query);
+	    $stmt->execute([
+		    ':username' => $username,
+	    ]);
+
+	    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+	    if($row['user_exists'] == 1){
+		    header("Location: ../index.php?=error201");
+		    exit();
+	    }
 
         $query = "INSERT INTO users (first_name, last_name, username, password) VALUES (:firstname, :lastname, :username, :password);";
         $stmt = $pdo->prepare($query);
