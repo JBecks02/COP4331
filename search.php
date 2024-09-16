@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $pdo = null;
         $stmt = null;
 
-        header("Location: ../nextPage.php?=success" . $_SESSION['result']['firstname']);
+        header("Location: ../nextPage.php?=success");
         exit();
 
     }catch(PDOException $e)
