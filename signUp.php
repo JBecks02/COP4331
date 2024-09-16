@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 	    require_once "dbh.inc.php";
 
 	    $query = "SELECT COUNT(*) AS user_exists FROM users WHERE username = :username;";
-	    $stmt = pdo->prepare($query);
+	    $stmt = $pdo->prepare($query);
 	    $stmt->execute([
 		    ':username' => $username,
 	    ]);
