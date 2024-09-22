@@ -88,7 +88,7 @@
 
                 
                 <div class="input-box">
-	            <input required id="password" type="text" name="password" placeholder="Password">
+	            <input required id="password" type="password" name="password" placeholder="Password">
                 </div>
 
                 <button class="btn" type="Submit">Submit</button>
