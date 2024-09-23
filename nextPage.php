@@ -15,6 +15,7 @@ session_start();
 
     <body>
         <main>
+
             <!-- Retrieve -->
             <div class="wrapper2">
                 <form action="search.php" method="post">
@@ -44,10 +45,10 @@ session_start();
                     <h1>Add Contact</h1>
                     
                     <div class="input-box">
-                        <input required id="firstname" type="text" name="firstname" placeholder="Firstname..." width="1004">
+                        <input required id="firstname" type="text" name="firstname" placeholder="First Name" width="1004">
                     </div>
                     <div class="input-box">
-                        <input required id="lastname" type="text" name="lastname" placeholder="lastname">
+                        <input required id="lastname" type="text" name="lastname" placeholder="Last Name">
                     </div>
                     <div class="input-box">
                         <input required id="phone" type="text" name="phone" placeholder="Phone Number">
@@ -67,10 +68,10 @@ session_start();
 
                     <h3>Enter Contact to Update:</h3>
                     <div class="input-box">
-                        <input required id="firstnameS" type="text" name="firstnameS" placeholder="Firstname..." width="1004">
+                        <input required id="firstnameS" type="text" name="firstnameS" placeholder="First Name" width="1004">
                     </div>
                     <div class="input-box">
-                        <input required id="lastnameS" type="text" name="lastnameS" placeholder="lastname">
+                        <input required id="lastnameS" type="text" name="lastnameS" placeholder="Last Name">
                     </div>
 
                     <h3>Update Contact to:</h3>
@@ -98,10 +99,10 @@ session_start();
 		        <h1>Remove Contact</h1>
 	        
                 <div class="input-box">
-                    <input  required id="firstname" type="text" name="firstname" placeholder="Firstname..." width="1004">
+                    <input  required id="firstname" type="text" name="firstname" placeholder="First Name" width="1004">
                 </div>
                 <div class="input-box">
-                    <input required id="lastname" type="text" name="lastname" placeholder="lastname">
+                    <input required id="lastname" type="text" name="lastname" placeholder="Last Name">
                 </div>
 
                 <button class="btn">Remove</button>
